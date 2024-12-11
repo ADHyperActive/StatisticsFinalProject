@@ -62,6 +62,7 @@
           // User clicked "No"
           var audio = new Audio('computer_has_virus.mp3');
           audio.play();
+          confirm("Hello, your computer has virus.")
           audio.addEventListener('ended', () => {
           console.log('Sound has finished playing');
           // Do something after the sound ends

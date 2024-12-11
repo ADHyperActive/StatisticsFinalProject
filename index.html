@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Statistics FinalProject</title>
+    
   </head>
   <body>
     <h1>Statistics Final Project:</h1>
@@ -23,9 +24,15 @@
     <p>&nbsp;</p>
     <hr />
     <p>&nbsp;</p>
-    <a href="https://shattereddisk.github.io/rickroll/rickroll.mp4">
-      <button class="button">Video Presentation but for real this time.</button>
-    </a>
+    <button onclick="confirmRedirect()">FOR REAL video presentation (not a rickroll)</button>
+    <script>
+      function confirmRedirect() {
+        if (!confirm("Are you an idiot?")) {
+          // User clicked "No"
+          window.location.href = "https://adhyperactive.github.io/youareanidiot/"; // Replace with your desired URL
+        }
+      }
+    </script>
     <p>&nbsp;</p>
     <hr />
     <p>&nbsp;</p>

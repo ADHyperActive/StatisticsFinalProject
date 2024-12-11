@@ -30,20 +30,7 @@
     <p>&nbsp;</p>
     <p>I enjoy lying with statistics. @howtoliewithstatistics</p>
     <script>
-      function confirmRedirect() {
-        if (!showConfirmationPopup("Are you an idiot?")) {
-          // User clicked "No"
-          var audio = new Audio('computer_has_virus.mp3');
-          audio.play();
-          confirm("Hello, your computer has virus.")
-          audio.addEventListener('ended', () => {
-          console.log('Sound has finished playing');
-          // Do something after the sound ends
-          window.location.href = "https://adhyperactive.github.io/youareanidiot/"; // Replace with your desired URL
-        });
-          
-        }
-      }
+
       function showConfirmationPopup(message) {
         return new Promise(resolve => {
           const popup = document.createElement('div');
@@ -76,6 +63,20 @@
       
           document.body.appendChild(popup);
         }
+      function confirmRedirect() {
+        if (!showConfirmationPopup("Are you an idiot?")) {
+          // User clicked "No"
+          var audio = new Audio('computer_has_virus.mp3');
+          audio.play();
+          confirm("Hello, your computer has virus.")
+          audio.addEventListener('ended', () => {
+          console.log('Sound has finished playing');
+          // Do something after the sound ends
+          window.location.href = "https://adhyperactive.github.io/youareanidiot/"; // Replace with your desired URL
+        });
+          
+        }
+      }
     </script>
   </body>
 </html>

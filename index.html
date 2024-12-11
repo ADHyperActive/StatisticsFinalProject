@@ -8,21 +8,35 @@
     <h1>Statistics Final Project:</h1>
     <p>&nbsp;</p>
     <p>This page is for my AP Statistics Final Project.</p>
-    <p>&nbsp;&nbsp;</p>
+    <p>&nbsp;</p>
     <hr />
-    <p>&nbsp;&nbsp;</p>
+    <p>&nbsp;</p>
     <a href="https://storymaps.arcgis.com/stories/a13bec86460d4bbaa3c43537479ab283">
       <button class="button">ArcGIS StoryMap</button>
     </a>
-    <p>&nbsp;&nbsp;</p>
+    <p>&nbsp;</p>
     <hr />
-    <p>&nbsp;&nbsp;</p>
+    <p>&nbsp;</p>
     <a href="https://adhyperactive.github.io/StatisticsFinalProject/pagenotposted.html">
       <button class="button">Video Presentation</button>
     </a>
-    <p>&nbsp;&nbsp;</p>
+    <p>&nbsp;</p>
     <hr />
-    <p>&nbsp;&nbsp;</p>
+    <p>&nbsp;</p>
+    <button onclick="showVideo()">My actual video presentation</button>
+
+    <div id="video-container" style="display: none;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pLWtNKecyr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function showVideo() {
+            document.getElementById("video-container").style.display = "block";
+        }
+    </script>
+    <p>&nbsp;</p>
+    <hr />
+    <p>&nbsp;</p>
     <p>I enjoy lying with statistics. @howtoliewithstatistics</p>
     
   </body>

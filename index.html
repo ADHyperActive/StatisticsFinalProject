@@ -24,10 +24,41 @@
     <p>&nbsp;</p>
     <hr />
     <p>&nbsp;</p>
-    <button onclick="confirmRedirect()">FOR REAL video presentation (not a rickroll)</button>
+    <button class="button" onclick="confirmRedirect()">FOR REAL video presentation (not a rickroll)</button>
     <script>
+      function showConfirmationPopup(message) {
+        return new Promise(resolve => {
+          const popup = document.createElement('div');
+          popup.classList.add('confirmation-popup');
+      
+          const messageElement = document.createElement('p');
+          messageElement.textContent = message;
+          popup.appendChild(messageElement);
+      
+          const buttonContainer = document.createElement('div');
+          buttonContainer.classList.add('button-container');
+      
+          const yesButton = document.createElement('button');
+          yesButton.textContent = 'Yes';
+          yesButton.addEventListener('click', () => {
+            resolve(true);
+            popup.remove();
+          });
+          buttonContainer.appendChild(yesButton);
+      
+          const noButton = document.createElement('button');
+          noButton.textContent = 'No';
+          noButton.addEventListener('click', () => {
+            resolve(false);
+            popup.remove();
+          });
+          buttonContainer.appendChild(noButton);
+      
+          popup.appendChild(buttonContainer);
+      
+          document.body.appendChild(popup);
       function confirmRedirect() {
-        if (!confirm("Are you an idiot?")) {
+        if (!showConfirmationPopup("Are you an idiot?")) {
           // User clicked "No"
           window.location.href = "https://adhyperactive.github.io/youareanidiot/"; // Replace with your desired URL
         }

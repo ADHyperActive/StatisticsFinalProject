@@ -62,7 +62,12 @@
           // User clicked "No"
           var audio = new Audio('computer_has_virus.mp3');
           audio.play();
+          audio.addEventListener('ended', () => {
+          console.log('Sound has finished playing');
+          // Do something after the sound ends
           window.location.href = "https://adhyperactive.github.io/youareanidiot/"; // Replace with your desired URL
+        });
+          
         }
       }
     </script>

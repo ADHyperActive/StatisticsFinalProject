@@ -24,56 +24,22 @@
     <p>&nbsp;</p>
     <hr />
     <p>&nbsp;</p>
-   <script>
+    button class="button" onclick="playAudioAndRedirect()">Video presentation but seriously (not a rickroll)</button>
 
-      function showConfirmationPopup(message) {
-        return new Promise(resolve => {
-          const popup = document.createElement('div');
-          popup.classList.add('confirmation-popup');
-      
-          const messageElement = document.createElement('p');
-          messageElement.textContent = message;
-          popup.appendChild(messageElement);
-      
-          const buttonContainer = document.createElement('div');
-          buttonContainer.classList.add('button-container');
-      
-          const yesButton = document.createElement('button');
-          yesButton.textContent = 'Yes';
-          yesButton.addEventListener('click', () => {
-            resolve(true);
-            popup.remove();
-          });
-          buttonContainer.appendChild(yesButton);
-      
-          const noButton = document.createElement('button');
-          noButton.textContent = 'No';
-          noButton.addEventListener('click', () => {
-            resolve(false);
-            popup.remove();
-          });
-          buttonContainer.appendChild(noButton);
-      
-          popup.appendChild(buttonContainer);
-      
-          document.body.appendChild(popup);
-        }
-      function confirmRedirect() {
-        if (!showConfirmationPopup("Are you an idiot?")) {
-          // User clicked "No"
-          var audio = new Audio('computer_has_virus.mp3');
-          audio.play();
-          confirm("Hello, your computer has virus.")
-          audio.addEventListener('ended', () => {
-          console.log('Sound has finished playing');
-          // Do something after the sound ends
-          window.location.href = "https://adhyperactive.github.io/youareanidiot/"; // Replace with your desired URL
-        });
-          
-        }
-      }
+    <script>
+    function playAudioAndRedirect() {
+      // Create an audio element
+      var audio = new Audio('computer_has_virus.mp3'); // Replace with your audio file path
+    
+      // Play the audio
+      audio.play();
+    
+      // Redirect to the desired link after a certain delay (adjust as needed)
+      setTimeout(function() {
+        window.location.href = 'https://adhyperactive.github.io/youareanidiot/'; // Replace with your desired link
+      }, 2000); // Redirect after 2 seconds
+    }
     </script>
-    <button class="button" onclick="confirmRedirect()">FOR REAL video presentation (not a rickroll)</button>
     <p>&nbsp;</p>
     <hr />
     <p>&nbsp;</p>

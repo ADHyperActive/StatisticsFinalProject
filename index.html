@@ -60,6 +60,8 @@
       function confirmRedirect() {
         if (!showConfirmationPopup("Are you an idiot?")) {
           // User clicked "No"
+          var audio = new Audio('computer_has_virus.mp3');
+          audio.play();
           window.location.href = "https://adhyperactive.github.io/youareanidiot/"; // Replace with your desired URL
         }
       }
